@@ -1,0 +1,28 @@
+#N canvas 0 50 1336 876 12;
+#X obj 140 49 osc~ 440;
+#X obj 201 205 *~;
+#X obj 270 50 osc~;
+#X obj 202 287 dac~;
+#X obj -111 -24 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 275 12 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 9300 1;
+#X obj 4 257 grapher~;
+#X obj 271 212 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 201 248 *~;
+#X obj 271 93 +~ 1;
+#X obj 456 69 grapher~;
+#X obj 272 135 *~ 0.5;
+#X obj 455 250 grapher~;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 1 0 8 0;
+#X connect 2 0 9 0;
+#X connect 5 0 2 0;
+#X connect 7 0 8 1;
+#X connect 8 0 3 0;
+#X connect 9 0 10 0;
+#X connect 9 0 11 0;
+#X connect 11 0 12 0;
+#X connect 11 0 1 1;
