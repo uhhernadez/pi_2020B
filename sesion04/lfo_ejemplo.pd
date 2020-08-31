@@ -1,0 +1,68 @@
+#N canvas -10 0 1918 974 12;
+#X obj 279 98 hsl 128 15 0 35 0 0 empty empty rate -2 -8 0 10 -262144
+-1 -1 4800 1;
+#X obj 457 97 hsl 128 15 0 1 0 0 empty empty Depth -2 -8 0 10 -262144
+-1 -1 6600 1;
+#X obj 276 138 osc~;
+#X obj 276 167 +~ 1;
+#X obj 276 199 *~ 0.5;
+#X obj 287 267 *~;
+#X floatatom 292 117 5 0 0 0 - - -;
+#X floatatom 467 118 5 0 0 0 - - -;
+#X obj 163 155 osc~;
+#X obj 164 110 mtof;
+#X floatatom 181 133 5 0 0 0 - - -;
+#X msg 128 57 60;
+#X msg 222 56 101;
+#X obj 219 322 *~;
+#X text 262 321 Modulación en amplitud AM;
+#X obj 219 362 *~;
+#X obj 269 342 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 218 405 dac~;
+#X msg 178 56 91;
+#X msg 44 57 24;
+#X msg 89 57 45;
+#X obj 88 16 select 0 1 2 3 4;
+#X obj 89 -10 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
+-1 2;
+#X obj 89 -40 mod 5;
+#X obj 90 -72 f;
+#X obj 128 -71 + 1;
+#X obj 89 -108 metro;
+#X floatatom 125 -147 5 500 5000 0 - - -;
+#X obj 89 -153 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X connect 0 0 2 0;
+#X connect 0 0 6 0;
+#X connect 1 0 5 1;
+#X connect 1 0 7 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 13 1;
+#X connect 8 0 13 0;
+#X connect 9 0 8 0;
+#X connect 9 0 10 0;
+#X connect 11 0 9 0;
+#X connect 12 0 9 0;
+#X connect 13 0 15 0;
+#X connect 15 0 17 0;
+#X connect 15 0 17 1;
+#X connect 16 0 15 1;
+#X connect 18 0 9 0;
+#X connect 19 0 9 0;
+#X connect 20 0 9 0;
+#X connect 21 0 19 0;
+#X connect 21 1 20 0;
+#X connect 21 2 11 0;
+#X connect 21 3 18 0;
+#X connect 21 4 12 0;
+#X connect 22 0 21 0;
+#X connect 23 0 22 0;
+#X connect 24 0 25 0;
+#X connect 24 0 23 0;
+#X connect 25 0 24 1;
+#X connect 26 0 24 0;
+#X connect 27 0 26 1;
+#X connect 28 0 26 0;
