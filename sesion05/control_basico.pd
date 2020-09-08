@@ -179,7 +179,7 @@
 -1 -1;
 #X obj 179 2003 random 2000;
 #X obj 398 2093 osc~;
-#X obj 398 2146 dac~;
+#X obj 398 2170 dac~;
 #X obj 398 2122 *~;
 #X obj 502 2025 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
@@ -338,6 +338,7 @@
 #X connect 166 0 164 0;
 #X connect 167 0 169 0;
 #X connect 169 0 168 0;
+#X connect 169 0 168 1;
 #X connect 170 0 169 1;
 #X connect 171 0 167 0;
 #X connect 172 0 171 0;
