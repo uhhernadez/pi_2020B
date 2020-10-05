@@ -1,0 +1,35 @@
+#N canvas -10 0 1918 974 12;
+#X obj 91 111 soundfiler;
+#X floatatom 91 146 20 0 0 0 - - -;
+#X obj 445 56 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 445 246 dac~;
+#X obj 557 58 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 605 65 stop;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array base_loop 288000 float 2;
+#X coords 0 1 288000 -1 200 140 1;
+#X restore 91 373 graph;
+#X msg 91 71 read -resize loop.wav base_loop;
+#X obj 448 107 tabplay~ base_loop;
+#X obj 96 279 tabread~ base_loop;
+#X obj 96 322 dac~;
+#X obj 96 237 line~;
+#X msg 96 208 0 \, 88200 4000;
+#X obj 653 128 lfo~;
+#X obj 448 201 *~;
+#X connect 0 0 1 0;
+#X connect 2 0 8 0;
+#X connect 4 0 8 0;
+#X connect 5 0 8 0;
+#X connect 7 0 0 0;
+#X connect 8 0 14 0;
+#X connect 8 1 4 0;
+#X connect 9 0 10 0;
+#X connect 9 0 10 1;
+#X connect 11 0 9 0;
+#X connect 12 0 11 0;
+#X connect 13 0 14 1;
+#X connect 14 0 3 0;
+#X connect 14 0 3 1;
