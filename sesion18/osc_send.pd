@@ -1,0 +1,12 @@
+#N canvas 1668 209 1124 697 12;
+#X obj 119 365 udpsend;
+#X msg 78 189 connect 192.168.0.10 12000;
+#X msg 154 224 disconnect;
+#X obj 316 289 packOSC;
+#X floatatom 312 188 5 0 0 0 - - -;
+#X msg 315 242 send /puredata/test \$1;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;

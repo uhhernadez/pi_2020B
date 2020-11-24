@@ -1,0 +1,6 @@
+#N canvas 1101 36 688 288 12;
+#X obj 151 220 unpackOSC;
+#X obj 151 244 print;
+#X obj 149 176 udpreceive 12001;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
