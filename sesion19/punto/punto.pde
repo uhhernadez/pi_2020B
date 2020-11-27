@@ -20,7 +20,9 @@ void setup() {
 void draw() {
   background(0);
   for(PVector p : puntos) {
-    ellipse(p.x, p.y, 10, 10);
+    float d = p.mag()/sqrt(2*521*521);
+    fill(255*(1-d),0,0);
+    ellipse(p.x, p.y, 30, 30);
   } 
 }
 
